@@ -1,0 +1,13 @@
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\SalesBLL.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\SalesBLL.pdb
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\obj\Debug\SalesBLL.csprojResolveAssemblyReference.cache
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\obj\Debug\SalesBLL.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\obj\Debug\SalesBLL.pdb
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\AutoMapper.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\AutoMapper.xml
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\SalesEntityDAL.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\EntityFramework.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\SalesEntityDAL.pdb
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\EntityFramework.xml
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\Ninject.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\Ninject.xml

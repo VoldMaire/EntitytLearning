@@ -1,0 +1,10 @@
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\obj\Debug\SalesEntityDAL.csprojResolveAssemblyReference.cache
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\bin\Debug\SalesEntityDAL.dll.config
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\bin\Debug\SalesEntityDAL.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\bin\Debug\SalesEntityDAL.pdb
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\bin\Debug\EntityFramework.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\bin\Debug\EntityFramework.xml
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\obj\Debug\SalesEntityDAL.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesEntityDAL\obj\Debug\SalesEntityDAL.pdb
