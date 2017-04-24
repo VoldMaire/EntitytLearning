@@ -56,13 +56,16 @@
     <Compile Include="Interfaces\IProviderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProviderService.cs" />
-    <Compile Include="Util\ServiceModule.cs" />
     <Compile Include="ValidationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SalesADODAL\SalesADODAL.csproj">
+      <Project>{639adf59-d35f-413c-bf02-89329608e36a}</Project>
+      <Name>SalesADODAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SalesEntityDAL\SalesEntityDAL.csproj">
       <Project>{4fc519a3-ef02-43f9-943b-a63965f9ec5f}</Project>
       <Name>SalesEntityDAL</Name>

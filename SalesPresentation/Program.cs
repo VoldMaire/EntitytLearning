@@ -14,7 +14,8 @@ namespace SalesPresentation
 
         static void Main(string[] args)
         {
-            using (ProductService prodServ = new ProductService())
+            string connString = "Data Source=DESKTOP-2RL6UKG\\SQLEXPRESS;Initial Catalog=SalesEntityDAL.ProductsContext;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            using (ProductService prodServ = new ProductService(connString))
             {
                 foreach (var cat in prodServ.GetCategories())
                 {
@@ -22,7 +23,7 @@ namespace SalesPresentation
                     {
                         Console.WriteLine(prod.Name);
                     }
-                    using (ProviderService provServ = new ProviderService())
+                    using (ProviderService provServ = new ProviderService(connString))
                     {
                         foreach (var prov in provServ.GetProviders(cat))
                         {
@@ -31,7 +32,7 @@ namespace SalesPresentation
                     }
                     Console.ReadLine();
                 }
-                using (ProviderService provServ = new ProviderService())
+                using (ProviderService provServ = new ProviderService(connString))
                 {
                     foreach (var prov in provServ.GetProvidersByCity("Seul"))
                     {

@@ -11,3 +11,5 @@ C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\De
 C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\EntityFramework.xml
 C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\Ninject.dll
 C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\Ninject.xml
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\SalesADODAL.dll
+C:\Users\Voldmaire\documents\visual studio 2015\Projects\SalesRd\SalesBLL\bin\Debug\SalesADODAL.pdb

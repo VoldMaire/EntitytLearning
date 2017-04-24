@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using SalesBLL.DTO;
 using SalesBLL.Interfaces;
-using SalesEntityDAL;
+using SalesADODAL;
+using SalesADODAL.Interfaces;
+using SalesADODAL.Models;
 using AutoMapper;
 
 namespace SalesBLL
@@ -14,9 +16,9 @@ namespace SalesBLL
     {
         private IUnitOfWork _dataBase;
 
-        public ProviderService()
+        public ProviderService(string connectionString)
         {
-            _dataBase = new UnitOfWork();
+            _dataBase = new UnitOfWork(connectionString);
         }
 
         public void Dispose()
