@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SalesADODAL.Interfaces
 {
-    class Gateway
+    static class Gateway
     {
+        public static string ConnectionString { get; set; }
     }
 }

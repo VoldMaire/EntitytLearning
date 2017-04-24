@@ -25,16 +25,35 @@ namespace SalesADODAL.Gateways
             Gateway.ConnectionString = connectionString;
         }
 
-        public static void Delete(Category record)
+        public static void Delete(int id)
         {
             using(SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 SqlCommand command = connection.CreateCommand();
-                command.CommandText = "Delete From [Category] Where id = @id";
+                command.CommandText = "Delete From [Categories] Where id = @id";
                 command.Parameters.Add("@id", SqlDbType.Int);
-                command.Parameters["@id"].Value = record.Id;
+                command.Parameters["@id"].Value = id;
                 command.ExecuteNonQuery();
+            }
+        }
+
+        public static Category Get(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandText = "Select * From [Categories] Where id=@id";
+                command.Parameters.Add("@id", SqlDbType.Int);
+                command.Parameters["@id"].Value = id;
+                SqlDataReader dbReader = command.ExecuteReader();
+                dbReader.Read();
+                Category category = new Category();
+                category.Id = (int)dbReader.GetValue(0);
+                category.Name = (string)dbReader.GetValue(1);
+                dbReader.Close();
+                return category;
             }
         }
 
@@ -54,6 +73,7 @@ namespace SalesADODAL.Gateways
                     category.Name = (string)dbReader.GetValue(1);
                     result.Add(category);
                 }
+                dbReader.Close();
             }
             return result;
         }
@@ -63,14 +83,38 @@ namespace SalesADODAL.Gateways
             using(SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                //SqlCommand 
-                SqlCommand commandInsert = connection.CreateCommand();
-                commandInsert.CommandText = "Insert Into [Categories] Values (@id, @Name)";
-                commandInsert.Parameters.Add("@id", SqlDbType.Int);
-                commandInsert.Parameters.Add("@Name", SqlDbType.NChar);
-                commandInsert.Parameters["@id"].Value = record.Id;
-                commandInsert.Parameters["@Name"].Value = record.Name;
-                commandInsert.ExecuteNonQuery();
+                SqlCommand commandSelect = connection.CreateCommand();
+                commandSelect.CommandText = "Select * From [Categories] Where id=@id";
+                commandSelect.Parameters.Add("@id", SqlDbType.Int);
+                commandSelect.Parameters["@id"].Value = record.Id;
+                SqlDataReader dbReader = commandSelect.ExecuteReader();
+                Category category = new Category();
+                while (dbReader.Read())
+                {
+                    category.Id = (int)dbReader.GetValue(0);
+                    category.Name = (string)dbReader.GetValue(1);
+                }
+                if (category.Name == null)
+                {
+                    SqlCommand commandInsert = connection.CreateCommand();
+                    commandInsert.CommandText = "Insert Into [Categories] Values (@id, @Name)";
+                    commandInsert.Parameters.Add("@id", SqlDbType.Int);
+                    commandInsert.Parameters.Add("@Name", SqlDbType.NChar);
+                    commandInsert.Parameters["@id"].Value = record.Id;
+                    commandInsert.Parameters["@Name"].Value = record.Name;
+                    commandInsert.ExecuteNonQuery();
+                }
+                else
+                {
+                    SqlCommand commandUpdate = connection.CreateCommand();
+                    commandUpdate.CommandText = "Update [Categories] Set Name=@Name Where id=@id";
+                    commandUpdate.Parameters.Add("@id", SqlDbType.Int);
+                    commandUpdate.Parameters.Add("@Name", SqlDbType.NChar);
+                    commandUpdate.Parameters["@id"].Value = record.Id;
+                    commandUpdate.Parameters["@Name"].Value = record.Name;
+                    commandUpdate.ExecuteNonQuery();
+                }
+
             }
         }
     }

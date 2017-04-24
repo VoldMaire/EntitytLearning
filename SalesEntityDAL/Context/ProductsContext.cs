@@ -18,7 +18,7 @@ namespace SalesEntityDAL
 
         static ProductsContext()
         {
-            Database.SetInitializer<ProductsContext>(new Contex.ProductsInitializer());
+            Database.SetInitializer<ProductsContext>(new Context.ProductsInitializer());
         }
 
         public DbSet<Product> Products { get; set; }

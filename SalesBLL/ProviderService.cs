@@ -26,6 +26,8 @@ namespace SalesBLL
 
         public IEnumerable<ProviderDTO> GetProviders(CategoryDTO category)
         {
+            if (category == null)
+                throw new ArgumentNullException("Argument cannot be null.");
             var products = _dataBase.Products.GetAll().Where(p => p.CategoryId == category.Id);
             var resultProviders = from prov in _dataBase.Providers.GetAll()
                          from prod in products

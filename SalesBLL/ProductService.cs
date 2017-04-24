@@ -48,12 +48,16 @@ namespace SalesBLL
 
         public IEnumerable<ProductDTO> GetProducts(ProviderDTO provider)
         {
+            if (provider == null)
+                throw new ArgumentNullException("Argument cannot be null.");
             var resultProducts = _dataBase.Products.GetAll().Where(p => p.ProviderId == provider.Id);
             return makeMap(resultProducts);
         }
 
         public IEnumerable<ProductDTO> GetProducts(CategoryDTO category)
         {
+            if (category == null)
+                throw new ArgumentNullException("Argument cannot be null.");
             var resultProducts = _dataBase.Products.GetAll().Where(p => p.CategoryId == category.Id);
             return makeMap(resultProducts);
         }

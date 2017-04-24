@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SalesADODAL.Models
 {
-    class Provider
+    public class Provider
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
     }
 }

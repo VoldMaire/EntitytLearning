@@ -42,6 +42,7 @@ namespace SalesPresentation
                 {
                     Console.WriteLine("Product {0} cost {1}", prod.Name, prod.Price);
                 }
+                CategoryDTO cat8 = new CategoryDTO();
                 Console.ReadLine();
             }
         }
